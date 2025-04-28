@@ -4,7 +4,7 @@ HELP.md
 .gradle/
 .idea/
 build/
-data/
+
 uploads/
 *.log
 !gradle/wrapper/gradle-wrapper.jar
