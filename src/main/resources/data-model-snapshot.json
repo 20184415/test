@@ -1,0 +1,1077 @@
+{
+  "snapshot": {
+    "created": "2025-04-24T13:15:24.134",
+    "database": {
+      "shortName": "postgresql",
+      "majorVersion": "999",
+      "minorVersion": "999",
+      "productName": "PostgreSQL",
+      "url": "jdbc://mock"
+    },
+    "objects": {
+      "liquibase.structure.core.Catalog": [
+        {
+          "catalog": {
+            "default": true,
+            "snapshotId": "f4d9100"
+          }
+        }
+      ]
+      ,
+      "liquibase.structure.core.Column": [
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "after_value",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9146",
+            "remarks": "변경 후 데이터",
+            "snapshotId": "f4d9151",
+            "type": {
+              "typeName": "text"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "before_value",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9146",
+            "remarks": "변경 전 데이터",
+            "snapshotId": "f4d9150",
+            "type": {
+              "typeName": "text"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "content_type",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9137",
+            "remarks": "파일 헤더(타입, Not Null)",
+            "snapshotId": "f4d9141",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "defaultValue": "CURRENT_TIMESTAMP!{liquibase.statement.DatabaseFunction}",
+            "name": "created_at",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9158",
+            "remarks": "생성일시 (from Base, Java: Instant)",
+            "snapshotId": "f4d9165",
+            "type": {
+              "typeName": "timestamp"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "defaultValue": "CURRENT_TIMESTAMP!{liquibase.statement.DatabaseFunction}",
+            "name": "created_at",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9137",
+            "remarks": "생성일시 (from Base, Not Null, Java: Instant)",
+            "snapshotId": "f4d9142",
+            "type": {
+              "typeName": "timestamp"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "defaultValue": "CURRENT_TIMESTAMP!{liquibase.statement.DatabaseFunction}",
+            "name": "created_at",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9146",
+            "remarks": "생성일시 (from Base, Java: Instant)",
+            "snapshotId": "f4d9154",
+            "type": {
+              "typeName": "timestamp"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "defaultValue": "CURRENT_TIMESTAMP!{liquibase.statement.DatabaseFunction}",
+            "name": "created_at",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9125",
+            "remarks": "생성일시 (from Base, Java: Instant)",
+            "snapshotId": "f4d9132",
+            "type": {
+              "typeName": "timestamp"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "defaultValue": "CURRENT_TIMESTAMP!{liquibase.statement.DatabaseFunction}",
+            "name": "created_at",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "생성일시 (from Base, Java: Instant)",
+            "snapshotId": "f4d9121",
+            "type": {
+              "typeName": "timestamp"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "dept_id",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "부서 ID (FK to departments.id, ON DELETE RESTRICT)",
+            "snapshotId": "f4d9116",
+            "type": {
+              "typeName": "bigint"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "description",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9125",
+            "remarks": "부서 설명",
+            "snapshotId": "f4d9130",
+            "type": {
+              "typeName": "text"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "email",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "이메일",
+            "snapshotId": "f4d9115",
+            "type": {
+              "columnSize": "100!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "emp_number",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9146",
+            "remarks": "대상 직원 사번 (FK to employees.emp_number, ON DELETE CASCADE)",
+            "snapshotId": "f4d9145",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "emp_number",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "사원 번호",
+            "snapshotId": "f4d9108",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "ended_at",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9158",
+            "remarks": "백업 종료 시간 (Nullable, Java: Instant)",
+            "snapshotId": "f4d9164",
+            "type": {
+              "typeName": "timestamp"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "file_id",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9158",
+            "remarks": "파일 아이디 (Nullable FK to binary_contents.id, ON DELETE SET NULL)",
+            "snapshotId": "f4d9157",
+            "type": {
+              "typeName": "bigint"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "file_name",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9137",
+            "remarks": "파일명 (Not Null)",
+            "snapshotId": "f4d9139",
+            "type": {
+              "columnSize": "100!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "foundation_date",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9125",
+            "remarks": "부서 설립일 (Java: LocalDate)",
+            "snapshotId": "f4d9131",
+            "type": {
+              "typeName": "date"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "hire_date",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "입사일 (Java: LocalDate)",
+            "snapshotId": "f4d9118",
+            "type": {
+              "typeName": "date"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "certainDataType": false,
+            "defaultValue": "nextval('backups_id_seq')!{liquibase.statement.DatabaseFunction}",
+            "name": "id",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9158",
+            "remarks": "백업 아이디 (Auto-increment)",
+            "sequence": "backups_id_seq",
+            "snapshotId": "f4d9160",
+            "type": {
+              "typeName": "bigint"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "certainDataType": false,
+            "defaultValue": "nextval('binary_contents_id_seq')!{liquibase.statement.DatabaseFunction}",
+            "name": "id",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9137",
+            "remarks": "파일 아이디 (Auto-increment)",
+            "sequence": "binary_contents_id_seq",
+            "snapshotId": "f4d9136",
+            "type": {
+              "typeName": "bigint"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "certainDataType": false,
+            "defaultValue": "nextval('change_logs_id_seq')!{liquibase.statement.DatabaseFunction}",
+            "name": "id",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9146",
+            "remarks": "수정 이력 아이디 (Auto-increment)",
+            "sequence": "change_logs_id_seq",
+            "snapshotId": "f4d9148",
+            "type": {
+              "typeName": "bigint"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "certainDataType": false,
+            "defaultValue": "nextval('departments_id_seq')!{liquibase.statement.DatabaseFunction}",
+            "name": "id",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9125",
+            "remarks": "부서 아이디 (Auto-increment)",
+            "sequence": "departments_id_seq",
+            "snapshotId": "f4d9124",
+            "type": {
+              "typeName": "bigint"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "certainDataType": false,
+            "defaultValue": "nextval('employees_id_seq')!{liquibase.statement.DatabaseFunction}",
+            "name": "id",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "직원 아이디 (Auto-increment)",
+            "sequence": "employees_id_seq",
+            "snapshotId": "f4d9113",
+            "type": {
+              "typeName": "bigint"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "ip_address",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9146",
+            "remarks": "요청 IP 주소",
+            "snapshotId": "f4d9153",
+            "type": {
+              "columnSize": "45!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "memo",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9146",
+            "remarks": "메모",
+            "snapshotId": "f4d9152",
+            "type": {
+              "typeName": "text"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "name",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9125",
+            "remarks": "부서 이름",
+            "snapshotId": "f4d9127",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "name",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "이름",
+            "snapshotId": "f4d9114",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "position",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "직책",
+            "snapshotId": "f4d9117",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "profile_image_id",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "프로필 사진 ID (Nullable FK to binary_contents.id, ON DELETE SET NULL)",
+            "snapshotId": "f4d9120",
+            "type": {
+              "typeName": "bigint"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "size",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9137",
+            "remarks": "파일 크기 (Not Null)",
+            "snapshotId": "f4d9140",
+            "type": {
+              "typeName": "bigint"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "started_at",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9158",
+            "remarks": "백업 시작 시간 (Java: Instant)",
+            "snapshotId": "f4d9163",
+            "type": {
+              "typeName": "timestamp"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "status",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9158",
+            "remarks": "진행 상태 (Enum: STARTED, COMPLETED, FAILED)",
+            "snapshotId": "f4d9162",
+            "type": {
+              "typeName": "backup_status_enum"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "status",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "재직 상태 (Enum: ACTIVE, INACTIVE, RESIGNED)",
+            "snapshotId": "f4d9119",
+            "type": {
+              "typeName": "employee_status_enum"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "type",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9146",
+            "remarks": "대상 작업 분류 (Enum: CREATE_EMPLOYEE, UPDATE_EMPLOYEE, DELETE_EMPLOYEE)",
+            "snapshotId": "f4d9149",
+            "type": {
+              "typeName": "change_log_type_enum"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "defaultValue": "CURRENT_TIMESTAMP!{liquibase.statement.DatabaseFunction}",
+            "name": "updated_at",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9158",
+            "remarks": "수정일시 (from Base, Java: Instant)",
+            "snapshotId": "f4d9166",
+            "type": {
+              "typeName": "timestamp"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "defaultValue": "CURRENT_TIMESTAMP!{liquibase.statement.DatabaseFunction}",
+            "name": "updated_at",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9125",
+            "remarks": "수정일시 (from Base, Java: Instant)",
+            "snapshotId": "f4d9133",
+            "type": {
+              "typeName": "timestamp"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "defaultValue": "CURRENT_TIMESTAMP!{liquibase.statement.DatabaseFunction}",
+            "name": "updated_at",
+            "nullable": false,
+            "relation": "liquibase.structure.core.Table#f4d9109",
+            "remarks": "수정일시 (from Base, Java: Instant)",
+            "snapshotId": "f4d9122",
+            "type": {
+              "typeName": "timestamp"
+            }
+          }
+        },
+        {
+          "column": {
+            "certainDataType": false,
+            "name": "worker",
+            "nullable": true,
+            "relation": "liquibase.structure.core.Table#f4d9158",
+            "remarks": "작업자",
+            "snapshotId": "f4d9161",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        }
+      ]
+      ,
+      "liquibase.structure.core.ForeignKey": [
+        {
+          "foreignKey": {
+            "deleteRule": "importedKeySetNull!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#f4d9157"
+            ]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#f4d9158",
+            "name": "fk_backup_file",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#f4d9136"
+            ]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#f4d9137",
+            "snapshotId": "f4d9156"
+          }
+        },
+        {
+          "foreignKey": {
+            "deleteRule": "importedKeyCascade!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#f4d9145"
+            ]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#f4d9146",
+            "name": "fk_changelog_employee",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#f4d9108"
+            ]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#f4d9109",
+            "snapshotId": "f4d9107"
+          }
+        },
+        {
+          "foreignKey": {
+            "deleteRule": "importedKeyRestrict!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#f4d9116"
+            ]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#f4d9109",
+            "name": "fk_employee_department",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#f4d9124"
+            ]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#f4d9125",
+            "snapshotId": "f4d9123"
+          }
+        },
+        {
+          "foreignKey": {
+            "deleteRule": "importedKeySetNull!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#f4d9120"
+            ]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#f4d9109",
+            "name": "fk_employee_profile_image",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#f4d9136"
+            ]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#f4d9137",
+            "snapshotId": "f4d9135"
+          }
+        }
+      ]
+      ,
+      "liquibase.structure.core.Index": [
+        {
+          "index": {
+            "columns": [
+              {
+                "column": {
+                  "name": "id"
+                }
+              }
+            ]
+            ,
+            "name": "backups_pkey",
+            "snapshotId": "f4d9159",
+            "table": "liquibase.structure.core.Table#f4d9158",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "columns": [
+              {
+                "column": {
+                  "name": "id"
+                }
+              }
+            ]
+            ,
+            "name": "binary_contents_pkey",
+            "snapshotId": "f4d9138",
+            "table": "liquibase.structure.core.Table#f4d9137",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "columns": [
+              {
+                "column": {
+                  "name": "id"
+                }
+              }
+            ]
+            ,
+            "name": "change_logs_pkey",
+            "snapshotId": "f4d9147",
+            "table": "liquibase.structure.core.Table#f4d9146",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "columns": [
+              {
+                "column": {
+                  "name": "name"
+                }
+              }
+            ]
+            ,
+            "name": "departments_name_key",
+            "snapshotId": "f4d9128",
+            "table": "liquibase.structure.core.Table#f4d9125",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "columns": [
+              {
+                "column": {
+                  "name": "id"
+                }
+              }
+            ]
+            ,
+            "name": "departments_pkey",
+            "snapshotId": "f4d9129",
+            "table": "liquibase.structure.core.Table#f4d9125",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "columns": [
+              {
+                "column": {
+                  "name": "emp_number"
+                }
+              }
+            ]
+            ,
+            "name": "employees_emp_number_key",
+            "snapshotId": "f4d9111",
+            "table": "liquibase.structure.core.Table#f4d9109",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "columns": [
+              {
+                "column": {
+                  "name": "id"
+                }
+              }
+            ]
+            ,
+            "name": "employees_pkey",
+            "snapshotId": "f4d9112",
+            "table": "liquibase.structure.core.Table#f4d9109",
+            "unique": true
+          }
+        }
+      ]
+      ,
+      "liquibase.structure.core.PrimaryKey": [
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#f4d9159",
+            "columns": [
+              "liquibase.structure.core.Column#f4d9160"
+            ]
+            ,
+            "name": "backups_pkey",
+            "snapshotId": "f4d9167",
+            "table": "liquibase.structure.core.Table#f4d9158"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#f4d9138",
+            "columns": [
+              "liquibase.structure.core.Column#f4d9136"
+            ]
+            ,
+            "name": "binary_contents_pkey",
+            "snapshotId": "f4d9143",
+            "table": "liquibase.structure.core.Table#f4d9137"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#f4d9147",
+            "columns": [
+              "liquibase.structure.core.Column#f4d9148"
+            ]
+            ,
+            "name": "change_logs_pkey",
+            "snapshotId": "f4d9155",
+            "table": "liquibase.structure.core.Table#f4d9146"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#f4d9129",
+            "columns": [
+              "liquibase.structure.core.Column#f4d9124"
+            ]
+            ,
+            "name": "departments_pkey",
+            "snapshotId": "f4d9134",
+            "table": "liquibase.structure.core.Table#f4d9125"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#f4d9112",
+            "columns": [
+              "liquibase.structure.core.Column#f4d9113"
+            ]
+            ,
+            "name": "employees_pkey",
+            "snapshotId": "f4d9144",
+            "table": "liquibase.structure.core.Table#f4d9109"
+          }
+        }
+      ]
+      ,
+      "liquibase.structure.core.Schema": [
+        {
+          "schema": {
+            "catalog": "liquibase.structure.core.Catalog#f4d9100",
+            "default": true,
+            "name": "public",
+            "snapshotId": "f4d9101"
+          }
+        }
+      ]
+      ,
+      "liquibase.structure.core.Sequence": [
+        {
+          "sequence": {
+            "incrementBy": "1!{java.math.BigInteger}",
+            "name": "backups_id_seq",
+            "owned": "backups",
+            "schema": "liquibase.structure.core.Schema#f4d9101",
+            "snapshotId": "f4d9105",
+            "startValue": "1!{java.math.BigInteger}"
+          }
+        },
+        {
+          "sequence": {
+            "incrementBy": "1!{java.math.BigInteger}",
+            "name": "binary_contents_id_seq",
+            "owned": "binary_contents",
+            "schema": "liquibase.structure.core.Schema#f4d9101",
+            "snapshotId": "f4d9106",
+            "startValue": "1!{java.math.BigInteger}"
+          }
+        },
+        {
+          "sequence": {
+            "incrementBy": "1!{java.math.BigInteger}",
+            "name": "change_logs_id_seq",
+            "owned": "change_logs",
+            "schema": "liquibase.structure.core.Schema#f4d9101",
+            "snapshotId": "f4d9104",
+            "startValue": "1!{java.math.BigInteger}"
+          }
+        },
+        {
+          "sequence": {
+            "incrementBy": "1!{java.math.BigInteger}",
+            "name": "departments_id_seq",
+            "owned": "departments",
+            "schema": "liquibase.structure.core.Schema#f4d9101",
+            "snapshotId": "f4d9103",
+            "startValue": "1!{java.math.BigInteger}"
+          }
+        },
+        {
+          "sequence": {
+            "incrementBy": "1!{java.math.BigInteger}",
+            "name": "employees_id_seq",
+            "owned": "employees",
+            "schema": "liquibase.structure.core.Schema#f4d9101",
+            "snapshotId": "f4d9102",
+            "startValue": "1!{java.math.BigInteger}"
+          }
+        }
+      ]
+      ,
+      "liquibase.structure.core.Table": [
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#f4d9160",
+              "liquibase.structure.core.Column#f4d9161",
+              "liquibase.structure.core.Column#f4d9162",
+              "liquibase.structure.core.Column#f4d9163",
+              "liquibase.structure.core.Column#f4d9164",
+              "liquibase.structure.core.Column#f4d9157",
+              "liquibase.structure.core.Column#f4d9165",
+              "liquibase.structure.core.Column#f4d9166"
+            ]
+            ,
+            "indexes": [
+              "liquibase.structure.core.Index#f4d9159"
+            ]
+            ,
+            "name": "backups",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#f4d9156"
+            ]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#f4d9167",
+            "remarks": "백업 정보",
+            "schema": "liquibase.structure.core.Schema#f4d9101",
+            "snapshotId": "f4d9158"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#f4d9136",
+              "liquibase.structure.core.Column#f4d9139",
+              "liquibase.structure.core.Column#f4d9140",
+              "liquibase.structure.core.Column#f4d9141",
+              "liquibase.structure.core.Column#f4d9142"
+            ]
+            ,
+            "indexes": [
+              "liquibase.structure.core.Index#f4d9138"
+            ]
+            ,
+            "name": "binary_contents",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#f4d9143",
+            "remarks": "이진 파일 정보 (프로필 이미지, 백업 파일 등)",
+            "schema": "liquibase.structure.core.Schema#f4d9101",
+            "snapshotId": "f4d9137"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#f4d9148",
+              "liquibase.structure.core.Column#f4d9149",
+              "liquibase.structure.core.Column#f4d9145",
+              "liquibase.structure.core.Column#f4d9150",
+              "liquibase.structure.core.Column#f4d9151",
+              "liquibase.structure.core.Column#f4d9152",
+              "liquibase.structure.core.Column#f4d9153",
+              "liquibase.structure.core.Column#f4d9154"
+            ]
+            ,
+            "indexes": [
+              "liquibase.structure.core.Index#f4d9147"
+            ]
+            ,
+            "name": "change_logs",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#f4d9107"
+            ]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#f4d9155",
+            "remarks": "변경 이력",
+            "schema": "liquibase.structure.core.Schema#f4d9101",
+            "snapshotId": "f4d9146"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#f4d9124",
+              "liquibase.structure.core.Column#f4d9127",
+              "liquibase.structure.core.Column#f4d9130",
+              "liquibase.structure.core.Column#f4d9131",
+              "liquibase.structure.core.Column#f4d9132",
+              "liquibase.structure.core.Column#f4d9133"
+            ]
+            ,
+            "indexes": [
+              "liquibase.structure.core.Index#f4d9129"
+            ]
+            ,
+            "name": "departments",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#f4d9134",
+            "remarks": "부서 정보",
+            "schema": "liquibase.structure.core.Schema#f4d9101",
+            "snapshotId": "f4d9125",
+            "uniqueConstraints": [
+              "liquibase.structure.core.UniqueConstraint#f4d9126"
+            ]
+            
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#f4d9113",
+              "liquibase.structure.core.Column#f4d9114",
+              "liquibase.structure.core.Column#f4d9115",
+              "liquibase.structure.core.Column#f4d9108",
+              "liquibase.structure.core.Column#f4d9116",
+              "liquibase.structure.core.Column#f4d9117",
+              "liquibase.structure.core.Column#f4d9118",
+              "liquibase.structure.core.Column#f4d9119",
+              "liquibase.structure.core.Column#f4d9120",
+              "liquibase.structure.core.Column#f4d9121",
+              "liquibase.structure.core.Column#f4d9122"
+            ]
+            ,
+            "indexes": [
+              "liquibase.structure.core.Index#f4d9112"
+            ]
+            ,
+            "name": "employees",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#f4d9123",
+              "liquibase.structure.core.ForeignKey#f4d9135"
+            ]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#f4d9144",
+            "remarks": "직원 정보",
+            "schema": "liquibase.structure.core.Schema#f4d9101",
+            "snapshotId": "f4d9109",
+            "uniqueConstraints": [
+              "liquibase.structure.core.UniqueConstraint#f4d9110"
+            ]
+            
+          }
+        }
+      ]
+      ,
+      "liquibase.structure.core.UniqueConstraint": [
+        {
+          "uniqueConstraint": {
+            "backingIndex": "liquibase.structure.core.Index#f4d9128",
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#f4d9127"
+            ]
+            ,
+            "deferrable": false,
+            "disabled": false,
+            "initiallyDeferred": false,
+            "name": "departments_name_key",
+            "snapshotId": "f4d9126",
+            "table": "liquibase.structure.core.Table#f4d9125",
+            "validate": true
+          }
+        },
+        {
+          "uniqueConstraint": {
+            "backingIndex": "liquibase.structure.core.Index#f4d9111",
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#f4d9108"
+            ]
+            ,
+            "deferrable": false,
+            "disabled": false,
+            "initiallyDeferred": false,
+            "name": "employees_emp_number_key",
+            "snapshotId": "f4d9110",
+            "table": "liquibase.structure.core.Table#f4d9109",
+            "validate": true
+          }
+        }
+      ]
+      
+    },
+    "snapshotControl": {
+      "snapshotControl": {
+        "includedType": [
+          "liquibase.structure.core.Catalog",
+          "liquibase.structure.core.Column",
+          "liquibase.structure.core.ForeignKey",
+          "liquibase.structure.core.Index",
+          "liquibase.structure.core.PrimaryKey",
+          "liquibase.structure.core.Schema",
+          "liquibase.structure.core.Sequence",
+          "liquibase.structure.core.Table",
+          "liquibase.structure.core.UniqueConstraint",
+          "liquibase.structure.core.View"
+        ]
+        
+      }
+    }
+  }
+}
