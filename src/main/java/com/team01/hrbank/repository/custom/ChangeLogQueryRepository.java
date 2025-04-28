@@ -5,6 +5,7 @@ import com.team01.hrbank.enums.ChangeType;
 import java.time.Instant;
 import java.util.List;
 
+
 public interface ChangeLogQueryRepository {
     List<ChangeLog> findByConditions(
         String employeeNumber,

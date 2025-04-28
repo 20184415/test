@@ -1,6 +1,8 @@
 package com.team01.hrbank.storage;
 
 import java.io.InputStream;
+import org.springframework.core.io.Resource;
+import org.springframework.http.ResponseEntity;
 
 public interface BinaryContentStorage {
 
@@ -8,4 +10,5 @@ public interface BinaryContentStorage {
 
     InputStream get(Long id);
 
+    ResponseEntity<Resource> downloadResponse(Long id);
 }
