@@ -1,20 +1,12 @@
+# application.yml
+
 spring:
-  datasource:
-    # Railway가 제공하는 환경 변수를 사용합니다.
-    # !!! 중요: 아래 변수 이름(JDBC_DATABASE_URL, PGUSER 등)은 예시이며,
-    #          실제 Railway 프로젝트의 'Variables' 탭에서 정확한 이름을 확인해야 합니다!!!
+  # datasource:  # <-- 이 부분을 완전히 제거하거나 주석 처리
+  #   url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+  #   username: ${PGUSER}
+  #   password: ${PGPASSWORD}
 
-    # 방법 1: Railway가 JDBC URL 형식의 환경 변수를 제공하는 경우 (가장 간단할 수 있음)
-    # url: ${JDBC_DATABASE_URL} # Railway에 이 변수가 있다면 이것만으로 충분할 수 있음
-
-    # 방법 2: 개별 환경 변수를 조합하여 JDBC URL 구성 (더 명확하고 일반적)
-    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE} # 각 부분을 환경 변수로 대체
-    username: ${PGUSER}            # 사용자 이름 환경 변수
-    password: ${PGPASSWORD}         # 비밀번호 환경 변수
-
-    driver-class-name: org.postgresql.Driver # 드라이버 클래스 이름 (보통 자동 감지되지만 명시해도 좋음)
-
-  # --- 이하 다른 설정들은 그대로 유지 ---
+  # --- JPA 및 다른 설정들은 여기에 합쳐서 유지 ---
   jpa:
     hibernate:
       ddl-auto: none
@@ -32,3 +24,5 @@ spring:
     scheduling:
       pool:
         size: 2
+
+# --- 파일 끝 ---
