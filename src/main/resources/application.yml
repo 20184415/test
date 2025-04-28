@@ -1,11 +1,12 @@
+# application.yml
+
 spring:
-  datasource:
-    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-    username: ${PGUSER}
-    password: ${PGPASSWORD}
+  # datasource:  # <-- 이 부분을 완전히 제거하거나 주석 처리
+  #   url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+  #   username: ${PGUSER}
+  #   password: ${PGPASSWORD}
 
-
-  # --- 이하 다른 설정들은 그대로 유지 ---
+  # --- JPA 및 다른 설정들은 여기에 합쳐서 유지 ---
   jpa:
     hibernate:
       ddl-auto: none
@@ -23,3 +24,5 @@ spring:
     scheduling:
       pool:
         size: 2
+
+# --- 파일 끝 ---
