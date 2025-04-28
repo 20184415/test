@@ -1,12 +1,8 @@
 spring:
   datasource:
-    # PostgreSQL JDBC URL (이미지에 나온 정보 기반)
-    url: jdbc:postgresql://localhost:5432/hr_bank
-    # 데이터베이스 사용자 이름 (이미지에 나온 정보 기반)
-    username: team01_username
-    # 데이터베이스 비밀번호 (사용자가 제공한 정보)
-    password: team01_password
-  
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
 
 
   # --- 이하 다른 설정들은 그대로 유지 ---
