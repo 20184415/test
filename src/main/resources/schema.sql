@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS binary_contents
 );
 
 -- 시퀀스 시작 값 변경
---ALTER SEQUENCE binary_contents_id_seq RESTART WITH 10000;
+ALTER SEQUENCE binary_contents_id_seq RESTART WITH 10000;
 
 
 CREATE TABLE IF NOT EXISTS employees
