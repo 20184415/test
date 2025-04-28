@@ -6,8 +6,7 @@ spring:
     username: team01_username
     # 데이터베이스 비밀번호 (사용자가 제공한 정보)
     password: team01_password
-    # PostgreSQL 드라이버 클래스 이름
-    driver-class-name: org.postgresql.Driver이버 클래스 이름 (보통 자동 감지되지만 명시해도 좋음)
+  
 
 
   # --- 이하 다른 설정들은 그대로 유지 ---
