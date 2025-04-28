@@ -8,7 +8,7 @@ import java.time.Instant;
 import java.util.List;
 import org.springframework.data.repository.query.Param;
 
-public interface BackupQueryRepository {
+public interface BackupCustomRepository {
 
 
     long countBackups(@Param("worker") String worker, @Param("status") BackupStatus status,

@@ -70,4 +70,5 @@ public class DepartmentController {
         DepartmentDto response = departmentService.updateDepartment(id, request);
         return ResponseEntity.ok(response);
     }
+
 }

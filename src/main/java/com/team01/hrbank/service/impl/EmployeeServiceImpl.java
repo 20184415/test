@@ -1,18 +1,20 @@
 package com.team01.hrbank.service.impl;
 
-import com.team01.hrbank.dto.changelog.DiffDto;
 import com.team01.hrbank.dto.employee.CursorPageRequestEmployeeDto;
+import com.team01.hrbank.dto.changelog.DiffDto;
 import com.team01.hrbank.dto.employee.CursorPageResponseEmployeeDto;
 import com.team01.hrbank.dto.employee.EmployeeCreateRequest;
 import com.team01.hrbank.dto.employee.EmployeeDistributionDto;
 import com.team01.hrbank.dto.employee.EmployeeDto;
 import com.team01.hrbank.dto.employee.EmployeeTrendDto;
 import com.team01.hrbank.dto.employee.EmployeeUpdateRequest;
+import com.team01.hrbank.entity.BaseEntity;
 import com.team01.hrbank.entity.BinaryContent;
 import com.team01.hrbank.entity.Department;
 import com.team01.hrbank.entity.Employee;
 import com.team01.hrbank.enums.ChangeType;
 import com.team01.hrbank.enums.EmployeeStatus;
+import com.team01.hrbank.enums.TimeUnit;
 import com.team01.hrbank.exception.DuplicateException;
 import com.team01.hrbank.exception.EntityNotFoundException;
 import com.team01.hrbank.mapper.EmployeeMapper;
@@ -24,7 +26,12 @@ import com.team01.hrbank.service.EmployeeService;
 import com.team01.hrbank.storage.BinaryContentStorage;
 import com.team01.hrbank.util.DiffUtil;
 import java.io.IOException;
+import java.lang.reflect.Field;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -62,13 +69,13 @@ public class EmployeeServiceImpl implements EmployeeService {
                 (long) profile.getBytes().length,
                 profile.getContentType()
             );
+            
             binaryContent = binaryContentRepository.save(binaryContent);
         }
 
         Employee employee = new Employee(
             employeeCreateRequest.name(),
             employeeCreateRequest.email(),
-            generateEmployeeNumber(),
             department,
             employeeCreateRequest.position(),
             employeeCreateRequest.hireDate(),
@@ -147,6 +154,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 (long) profile.getBytes().length,
                 profile.getContentType()
             );
+            
             binaryContent = binaryContentRepository.save(binaryContent);
         }
 
@@ -177,7 +185,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeRepository.save(employee);
 
         if (binaryContent != null) {
-            System.out.println("binary" + binaryContent.getId());
             binaryContentStorage.save(binaryContent.getId(), profile.getBytes());
         }
 
@@ -205,6 +212,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     @Transactional(readOnly = true)
     public List<EmployeeTrendDto> getEmployeeTrend(LocalDate from, LocalDate to, String unit) {
+        // 기본값 설정
         LocalDate now = LocalDate.now();
         if (to == null) {
             to = now;
@@ -250,19 +258,14 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepository.employeeCountBy(employeeStatus, fromDate, toDate);
     }
 
-    private String generateEmployeeNumber() {
-        Employee lastEmployee = employeeRepository.findTopByOrderByIdDesc().orElse(null);
-        Long newEmployeeId = (lastEmployee != null) ? lastEmployee.getId() + 1 : 1L;
-        return String.format("EMP%05d", newEmployeeId);
-    }
-
+    // 기간별 기본 시작일 계산
     private LocalDate calculateDefaultFrom(LocalDate to, String unit) {
         return switch (unit.toLowerCase()) {
-            case "day" -> to.minusDays(12);
+            case "day" -> to.minusDays(30);
             case "week" -> to.minusWeeks(12);
-            case "quarter" -> to.minusMonths(12 * 3); // 12분기 = 3년
-            case "year" -> to.minusYears(12);
-            default -> to.minusMonths(12); // month 기본값
+            case "quarter" -> to.minusMonths(12);
+            case "year" -> to.minusYears(5);
+            default -> to.minusMonths(12); // 기본값은 1년
         };
     }
 }

@@ -1,19 +1,23 @@
 .DS_Store
 HELP.md
+application.yml
 .gradle
 .gradle/
 .idea/
 build/
 data/*
 uploads/
+images/
 *.log
 !gradle/wrapper/gradle-wrapper.jar
-!/src/main//build/
-!/src/test//build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 README.md
+src/main/resources
 src/main/generated
 
-STS
+
+### STS ###
 .apt_generated
 .classpath
 .factorypath
@@ -22,24 +26,24 @@ STS
 .springBeans
 .sts4-cache
 bin/
-!/src/main//bin/
-!/src/test//bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-IntelliJ IDEA
+### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
 out/
-!/src/main//out/
-!/src/test//out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-NetBeans
+### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-VS Code
+### VS Code ###
 .vscode/

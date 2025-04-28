@@ -3,7 +3,6 @@ package com.team01.hrbank.controller;
 import com.team01.hrbank.entity.BinaryContent;
 import com.team01.hrbank.repository.BinaryContentRepository;
 import com.team01.hrbank.service.BackupService;
-import com.team01.hrbank.service.BinaryContentService;
 import com.team01.hrbank.storage.BinaryContentStorage;
 import com.team01.hrbank.storage.CsvBackupStorage;
 import jakarta.persistence.EntityNotFoundException;
@@ -28,15 +27,13 @@ public class BinaryContentController {
     private final BackupService backupService;
   
     private final BinaryContentStorage binaryContentStorage;
-    private final BinaryContentService binaryContentService;
 
     @GetMapping("/{id}/download")
     public ResponseEntity<Resource> downloadFile(@PathVariable Long id) {
-        if (id < 100_000_000L) {
+        if (id < 10000L) {
             backupService.validateBackupId(id);
             return csvBackupStorage.downloadResponse(id);
         } else {
-            binaryContentService.find(id);
             return binaryContentStorage.downloadResponse(id);
         }
     }

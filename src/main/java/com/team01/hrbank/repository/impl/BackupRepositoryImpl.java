@@ -13,7 +13,7 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.team01.hrbank.dto.backup.CursorRequest;
 import com.team01.hrbank.entity.Backup;
 import com.team01.hrbank.enums.BackupStatus;
-import com.team01.hrbank.repository.custom.BackupQueryRepository;
+import com.team01.hrbank.repository.custom.BackupCustomRepository;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Base64;
@@ -25,7 +25,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.util.StringUtils;
 
 @RequiredArgsConstructor
-public class BackupRepositoryImpl implements BackupQueryRepository {
+public class BackupRepositoryImpl implements BackupCustomRepository {
 
     private final JPAQueryFactory jpaQueryFactory;
 

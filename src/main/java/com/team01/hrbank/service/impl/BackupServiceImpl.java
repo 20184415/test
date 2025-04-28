@@ -4,6 +4,7 @@ import com.team01.hrbank.dto.backup.BackupDto;
 import com.team01.hrbank.dto.backup.BackupPageDto;
 import com.team01.hrbank.dto.backup.CursorRequest;
 import com.team01.hrbank.entity.Backup;
+import com.team01.hrbank.entity.BaseEntity;
 import com.team01.hrbank.entity.BinaryContent;
 import com.team01.hrbank.entity.Employee;
 import com.team01.hrbank.enums.BackupStatus;
@@ -16,6 +17,7 @@ import com.team01.hrbank.service.BackupService;
 import com.team01.hrbank.storage.CsvBackupStorage;
 import jakarta.persistence.EntityNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.time.Instant;
 import java.util.Base64;
 import java.util.List;
@@ -46,8 +48,8 @@ public class BackupServiceImpl implements BackupService {
         return applicationContext.getBean(BackupServiceImpl.class);
     }
 
-    @Scheduled(cron = "${spring.backup.schedule.time}")
     @Override
+    @Scheduled(cron = "${spring.backup.schedule.time}")
     public void run() {
         Backup runBackup = null;
         try {

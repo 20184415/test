@@ -70,7 +70,7 @@ public class DepartmentRepositoryImpl implements DepartmentQueryRepository {
                                 .and(department.id.gt(idAfter)))
                     );
                 }
-                // 이름 기준 정렬일 때
+            // 이름 기준 정렬일 때
             } else if ("name".equalsIgnoreCase(sortField)) {
                 if ("desc".equalsIgnoreCase(sortDirection)) {
                     // 내림 차순

@@ -6,11 +6,11 @@ import java.time.Instant;
 import org.springframework.data.annotation.LastModifiedDate;
 
 @MappedSuperclass
-public abstract class BaseUpdatableEntity extends BaseEntity {
+    public abstract class BaseUpdatableEntity extends BaseEntity {
 
-    @LastModifiedDate
-    @Column
-    protected Instant updatedAt;
-}
+        @LastModifiedDate
+        @Column
+        protected Instant updatedAt;
+    }
 
 
